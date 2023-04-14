@@ -1,0 +1,133 @@
+.navbar{
+    width: 100%;
+    background: #fff;
+    box-shadow: 3px 0px 20px rgba(0,0,0,0.04);
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left:0;
+    .navbar-wrapper{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 30px;
+        .logo{
+            display: flex;
+            align-items: center;
+            width: 300px;
+            img{
+                height: 30px;
+                object-fit: contain;
+            }
+        }
+        .search-container{
+            display: flex;
+            align-items: center;
+            width: calc(100% - 300px);
+            margin-left: 100px;
+            form{
+                width: 400px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                box-sizing: border-box;
+                overflow:hidden;
+                input{
+                    border: 2px solid #eee;
+                    width: 100%;
+                    padding: 12px 20px;
+                    border-radius: 8px 0 0 8px ;
+                    outline:none;
+                    font-size:14px;
+                    &:focus{
+                        border: 2px solid #39cdcc;
+                    }
+                    &::placeholder{
+                        color: #545f7d;
+                        opacity: 0.6;
+                    }
+                }
+                .search-btn{
+                    background: #39cdcc;
+                    border:2px solid #39cdcc;
+                    display:flex;
+                    align-items: center;
+                    justify-content:center;
+                    padding: 13px;
+                    border-radius: 0 8px 8px 0;
+                    cursor:pointer;
+                }
+            }
+        }
+        .navbar-right{
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-right: 2rem;
+            a{
+                font-size: 16px;
+                color: #213f7d;
+                text-decoration: none;
+                margin-right: 2.5rem;
+                &:hover{
+                    text-decoration:underline;
+                }
+            }
+            .notification{
+                cursor:pointer;
+                margin-right: 1.5rem;
+            }
+            .profile-img-wrapper{
+                border-radius:100%;
+                overflow: hidden;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                width: 48px;
+                img{
+                    width:100%;
+                    object-fit:contain;
+                }
+            }
+            .navbar-dropdown{
+                position: relative;
+                display: inline-block;
+                .profile-name{
+                    display:flex;
+                    align-items:center;
+                    gap: 0.7rem;
+                    cursor:pointer;
+                    color:#213f7d;
+                    background: transparent;
+                    font-size: 16px;
+                    border: none;
+                }
+                .dropdown-items{
+                    position: absolute;
+                    top: 100%;
+                    z-index: 100;
+                    left: -1rem;
+                    margin: 0;
+                    margin-top: 1rem;
+                    min-width: 100%;
+                    background: #fff;
+                    padding: 8px 0;
+                    border: 1px solid rgba(33, 63, 125, 0.06);
+                    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+                    border-radius: 4px;
+                    .dropdown-link{
+                        display: block;
+                        color: #213f7d;
+                        padding: 8px 16px;
+                        text-decoration: none;
+                        width: 100%;
+                        &:hover{
+                            background: rgba(57, 205, 205, 0.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
